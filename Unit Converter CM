@@ -1,0 +1,42 @@
+package convert;
+
+import java.util.Scanner;
+public class unitConverter {
+    public static void main (String []args){
+        
+        Scanner scan = new Scanner( System.in );
+        
+        System.out.println("***Welcome to my unit converter***");
+        System.out.println("");
+        System.out.println("This converter can be used to convert miles, yards, or nautical miles into inches!");
+        System.out.println("Please type in a quantity of miles to see how many inches are in it.");
+        double userInput = scan.nextDouble();
+        System.out.println(userInput + " mile(s) has " + milesToInches(userInput) + " inches.");
+        
+        System.out.println("");
+        System.out.println("Type in any quantity of yards to see how many inches are in it.");
+        userInput = scan.nextDouble();
+        System.out.println(userInput + " yard(s) has " + yardsToInches(userInput) + " inches.");
+        
+        System.out.println("");
+        System.out.println("Type in any quantity of nautical miles to see how many inches are in it.");
+        userInput = scan.nextDouble();
+        System.out.println(userInput + " nautical mile(s) has " + nmToInches(userInput) + " inches.");
+        
+        
+    }
+    private static double milesToInches(double miles){
+        final double miToInches = 63360;
+        return miToInches * miles;
+    }
+    private static double yardsToInches(double yards){
+        final double yrdToInches = 36;
+        return yrdToInches * yards;
+    }
+    private static double nmToInches(double nm){
+        final double nmToInches = 72913.4;
+        return nmToInches * nm;
+    }
+        
+   
+}
