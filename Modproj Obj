@@ -1,0 +1,71 @@
+public class Car {
+    private final int BASE_PRICE = 34000;
+    private int price;
+    private String color;
+    private String interior;
+    private String transmission;
+    
+    public Car(String interior, String transmission, String color)
+    {
+        clear();
+        setColor(color);
+        setInterior(interior);
+        setTransmission(transmission);
+    }
+    private void clear()
+    {
+        price = BASE_PRICE;
+    }
+    
+    public int getPrice()
+    {
+        return price;
+    }
+    
+    public String getColor()
+    {
+        return color;     
+    }
+    public String getInterior()
+    {
+        return interior;
+    }
+    public String getTransmission()
+    {
+        return transmission;
+    }     
+    private void setPrice(int n)
+    {
+        price = price + n;
+    }
+    private void setColor(String c)
+    {
+        color = c;
+        if (color.equalsIgnoreCase("Machine Gray"))
+            setPrice(445);
+        else if (color.equalsIgnoreCase("Soul Red"))
+            setPrice(545);
+        else if (color.equalsIgnoreCase("Jet Black"))
+            setPrice(400);
+        else setPrice(500);
+        
+    }
+     private void setTransmission(String t)
+    {
+        transmission = t;
+        if (transmission.equalsIgnoreCase("Automatic"))
+            setPrice(600);
+        else setPrice(40);
+    }
+    private void setInterior(String i)
+    {
+        interior = i;
+        if (interior.equalsIgnoreCase("Tan"))
+            setPrice(200);
+        else if (interior.equalsIgnoreCase("Black"))
+            setPrice(300);
+        else setPrice(400);
+    }
+    
+    
+}
