@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class mainc {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Hi, welcome to my simulation of the mazda Mx5 spec customization process.");
+        System.out.println("First, please select your interior.");
+        System.out.println("Here are the options: Tan - 200, Black - 300, White - 400");
+        System.out.print("Enter the name of the color you want. ");
+        String interior = sc.next();
+        
+        System.out.println("Next, please select your transmission.");
+        System.out.println("Here are the options: Automatic - 600 Manual - 40");
+        System.out.print("Enter the name of the transmission you want. ");
+        String transmission = sc.next();
+        
+        System.out.println("Next, please select the color of your car.");
+        System.out.println("Here are the options: Gray - 445, Red - 545, Black - 400, Blue - 500");
+        System.out.print("Enter the name of the transmission you want. ");
+        String color = sc.next();
+        Car car = new Car(interior, transmission, color);
+        
+        System.out.println("Here are the specs you have chosen.");
+        System.out.println("Interior - " + car.getInterior());
+        System.out.println("Transmission - " + car.getTransmission());
+        System.out.println("Color - " + car.getColor());
+        System.out.println("Price - " + car.getPrice());
+        
+    }
+}
